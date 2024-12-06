@@ -1,0 +1,8 @@
+# Path to your dataset
+# path:
+train: D:/SIG/Yolo/patches/yolo/train/images  # Path to the train images
+val: D:/SIG/Yolo/patches/yolo/val/images  # Path to the validation images
+
+# Number of classes
+nc: 1  
+names: ['field']
