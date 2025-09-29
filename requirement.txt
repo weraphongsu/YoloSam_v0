@@ -1,0 +1,31 @@
+# Essential Python Packages
+numpy
+pandas
+matplotlib
+opencv-python
+Pillow
+geopandas
+shapely
+rasterio
+scipy
+tqdm
+
+# Google Cloud Libraries for Workbench
+google-cloud-storage
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+
+# Geospatial Libraries
+geemap
+earthengine-api
+folium
+
+# Machine Learning and Deep Learning
+torch
+torchvision
+ultralytics  # YOLOv10
+git+https://github.com/ChaoningZhang/MobileSAM.git  # MobileSAM (SAM2)
+
+# GDAL for geospatial data processing
+gdal

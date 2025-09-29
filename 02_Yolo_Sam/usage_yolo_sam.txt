@@ -1,0 +1,1 @@
+python 00_exportDataYoloTileslatlon.py --nr 0
