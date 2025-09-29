@@ -44,9 +44,9 @@ MIN_AREA = 100
 
 # Paths for models
 # YOLO_MODEL_PATH = "D:/SIG/Yolo/training_results/field_detection_exp1/weights/best.pt"
-YOLO_MODEL_PATH = 'D:/SIG/Yolo/training_results/train_medium_exp3/weights/best.pt'
-SAM_MODEL_CFG = "D:/SIG/sam2/sam2/configs/sam2.1/sam2.1_hiera_b+.yaml"
-SAM_MODEL_CHECKPOINT = "D:/SIG/sam2/checkpoints/sam2.1_hiera_base_plus.pt"
+YOLO_MODEL_PATH = '/Users/weraphongsuaruang/YoloSam_v0/training_results/field_detection_exp1/weights/best.pt'
+SAM_MODEL_CFG = '/Users/weraphongsuaruang/YoloSam_v0/configs/sam2.1/sam2.1_hiera_b+.yaml'
+SAM_MODEL_CHECKPOINT = '/Users/weraphongsuaruang/YoloSam_v0/checkpoints/sam2.1_hiera_base_plus.pt'
 
 # Initialize YOLO model
 yolo_model = YOLO(YOLO_MODEL_PATH)
@@ -120,7 +120,8 @@ def calculate_bbox(coordinates):
     xmax = max(coord[0] for coord in coordinates)
     ymin = min(coord[1] for coord in coordinates)
     ymax = max(coord[1] for coord in coordinates)
-    return [xmin, ymin, xmax+0.02, ymax+0.02]
+    # return [xmin, ymin, xmax+0.02, ymax+0.02]
+    return [xmin, ymin, xmax, ymax]
 
 # Function to convert YOLO boxes to SAM2 format
 def convert_yolo_boxes_to_sam2(bounding_boxes, img_width, img_height):
