@@ -27,7 +27,7 @@ file_pairs = [(os.path.join(fields_folder, f), os.path.join(images_folder, f.rep
               for f in fields_files if f.replace("_fields", "") in image_files]
 
 
-    # Define parameters
+# Define parameters
 patch_size = 640 *4 # Size of the patch
 downsample = True
 # scale_factor = 0.3335
