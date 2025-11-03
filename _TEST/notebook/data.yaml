@@ -1,0 +1,8 @@
+# Path to your dataset
+# path:
+train: /Users/weraphongsuaruang/Airbus_Combodia/patches2/yolo/train/images  # Path to the train images
+val: /Users/weraphongsuaruang/Airbus_Combodia/patches2/yolo/val/images # Path to the validation images
+
+# Number of classes
+nc: 1  
+names: ['field']

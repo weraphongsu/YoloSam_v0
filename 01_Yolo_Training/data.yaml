@@ -1,7 +1,7 @@
 # Path to your dataset
 # path:
-train: D:/SIG/Yolo/patches1/yolo/train/images  # Path to the train images
-val: D:/SIG/Yolo/patches1/yolo/val/images  # Path to the validation images
+train: /Users/weraphongsuaruang/Airbus_Combodia/patches2/yolo/train/images  # Path to the train images
+val: /Users/weraphongsuaruang/Airbus_Combodia/patches2/yolo/val/images # Path to the validation images
 
 # Number of classes
 nc: 1  
