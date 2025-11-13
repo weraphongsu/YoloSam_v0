@@ -364,13 +364,22 @@ def tms_to_geotiff(
         )
         return
 
+    # xyz_tiles = {
+    #     "OPENSTREETMAP": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+    #     "ROADMAP": "https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}",
+    #     "SATELLITE": "https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}",
+    #     "TERRAIN": "https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}",
+    #     "HYBRID": "https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}",
+    # }
+
     xyz_tiles = {
-        "OPENSTREETMAP": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-        "ROADMAP": "https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}",
-        "SATELLITE": "https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}",
-        "TERRAIN": "https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}",
-        "HYBRID": "https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}",
-    }
+    "OPENSTREETMAP": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+    "ROADMAP": "https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}",
+    "SATELLITE": "https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}",
+    "TERRAIN": "https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}",
+    "HYBRID": "https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}",
+    "ESRI": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",  # add ESRI as an additional option
+}
 
     basemaps = get_basemaps()
 
