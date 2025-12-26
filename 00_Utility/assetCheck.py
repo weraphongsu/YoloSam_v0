@@ -1,6 +1,5 @@
 import ee
 
-# Initialize Google Earth Engine
 try:
     ee.Initialize()
     print("Google Earth Engine initialized successfully!")
@@ -8,14 +7,13 @@ except Exception as e:
     print(f"Error initializing GEE: {e}")
     exit()
 
-# Define the asset folder path
+
 asset_folder = "projects/servir-mekong/AirBUS/FieldDelineation"
 
 print(f"Checking assets in: {asset_folder}")
 print("-" * 50)
 
 try:
-    # List all assets in the folder
     assets = ee.data.listAssets({'parent': asset_folder})
     
     if assets and 'assets' in assets:
@@ -29,7 +27,7 @@ try:
             print(f"{i}. Asset ID: {asset_id}")
             # print(f"   Type: {asset_type}")
             
-            # Get additional info if it's an image or image collection
+           
             if asset_type in ['IMAGE', 'IMAGE_COLLECTION']:
                 try:
                     if asset_type == 'IMAGE':
@@ -40,7 +38,7 @@ try:
                         size = collection.size().getInfo()
                         print(f"   Collection size: {size} images")
                         
-                        # Get first image info
+                        
                         if size > 0:
                             first_img = collection.first().getInfo()
                             if first_img.get('bands'):

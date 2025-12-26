@@ -1,3 +1,5 @@
+## #use this script to merge raster tiles using GDAL with improved parameters when automate scripot fails ####
+
 import os
 import glob
 import subprocess

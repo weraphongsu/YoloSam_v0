@@ -7,16 +7,16 @@ def analyze_geotiff(file_path):
     """Analyze and display comprehensive information about a GeoTIFF file"""
     
     if not os.path.exists(file_path):
-        print(f"❌ File not found: {file_path}")
+        print(f" File not found: {file_path}")
         return
     
-    print(f"📁 Analyzing file: {file_path}")
+    print(f"Analyzing file: {file_path}")
     print("=" * 80)
     
     try:
         with rasterio.open(file_path) as dataset:
             # Basic Information
-            print("🔍 BASIC INFORMATION")
+            print(" BASIC INFORMATION")
             print("-" * 40)
             print(f"Width (pixels):      {dataset.width}")
             print(f"Height (pixels):     {dataset.height}")
@@ -26,13 +26,13 @@ def analyze_geotiff(file_path):
             print(f"File size:           {os.path.getsize(file_path) / (1024*1024):.2f} MB")
             
             # Coordinate Reference System
-            print("\n🌍 COORDINATE REFERENCE SYSTEM")
+            print("\nCOORDINATE REFERENCE SYSTEM")
             print("-" * 40)
             print(f"CRS:                 {dataset.crs}")
             print(f"EPSG Code:           {dataset.crs.to_epsg() if dataset.crs else 'None'}")
             
             # Geospatial Information
-            print("\n📍 GEOSPATIAL INFORMATION")
+            print("\nGEOSPATIAL INFORMATION")
             print("-" * 40)
             bounds = dataset.bounds
             print(f"Bounding Box:")
@@ -68,7 +68,7 @@ def analyze_geotiff(file_path):
             print(f"  Resolution Y:      ~{res_y_meters:.2f} meters/pixel")
             
             # Band Information
-            print("\n📊 BAND INFORMATION")
+            print("\n BAND INFORMATION")
             print("-" * 40)
             for i in range(1, dataset.count + 1):
                 print(f"Band {i}:")
@@ -142,9 +142,8 @@ def analyze_geotiff(file_path):
                 print(f"Block size:          {dataset.block_shapes[0] if dataset.block_shapes else 'Unknown'}")
             
     except Exception as e:
-        print(f"❌ Error analyzing file: {e}")
+        print(f" canot read: {e}")
 
-# Analyze the specific file
 if __name__ == "__main__":
     file_path = "/Users/weraphongsuaruang/YoloSam_v0/Test_img/Crops/airbus_box_1_bing.tif"
     analyze_geotiff(file_path)
